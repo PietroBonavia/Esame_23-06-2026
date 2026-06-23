@@ -38,7 +38,7 @@ class View:
 
         self._btnUtentiConnessi = ft.ElevatedButton(
             text="Utenti più connessi",
-            disabled=True,
+            disabled=False,
             on_click=self._controller.handler_utenti_connessi
         )
 
@@ -58,18 +58,19 @@ class View:
         self._ddUtente = ft.Dropdown(
             label="Utente iniziale",
             width=400,
-            disabled=True
+            disabled=False
         )
 
         self._txtL = ft.TextField(
             label="Lunghezza sequenza",
             width=200,
-            disabled=True
+            disabled=False
         )
 
         self._btnSequenza = ft.ElevatedButton(
             text="Cerca Sequenza",
-            disabled=True
+            disabled=False,
+            on_click=self._controller.cerca_sequenza
         )
 
         row2 = ft.Row(
